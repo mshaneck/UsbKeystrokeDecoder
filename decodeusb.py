@@ -6,7 +6,7 @@ import sys
 # This program is provided mainly for my own reference but feel free to use it and modify it to suit your needs. It will likely have to be customized to suit various challenges.
 
 # To get the usb capture data:
-# tshark -Y ((usb.transfer_type == 0x01) && (frame.len == 35)) && !(usb.capdata == 00:00:00:00:00:00:00:00) -r deadly_arthropod.pcap -T fields -e usb.capdata > usb.capdata
+# tshark -Y ((usb.transfer_type == 0x01) && (frame.len == 35)) && !(usb.capdata == 00:00:00:00:00:00:00:00) -r filewithusbcapture.pcap -T fields -e usb.capdata > usb.capdata
 # For the above, you may need to adjust the length of the cframe length
 
 # Mappings from http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
